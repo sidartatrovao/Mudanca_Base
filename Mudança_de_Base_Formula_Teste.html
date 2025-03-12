@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fator de Assimetria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+    <script>
+        function calcularSoma() {
+            var a = parseFloat(document.getElementById("Vb1").value);
+            var b = parseFloat(document.getElementById("Vb2").value);
+			 c = parseFloat(document.getElementById("Sb1").value);
+            var d = parseFloat(document.getElementById("Sb2").value);
+			 e = parseFloat(document.getElementById("Z1pu").value);
+         
+			
+		
+            var soma = e * a/b * a/b * d/c;
+			
+			
+            document.getElementById("resultado").innerText = "Z2 pu: " + soma;
+        }
+    </script>
+    
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto em Calibri</title>
+    <style>
+        .texto-calibri {
+            font-family: 'Calibri', sans-serif; /* Define a fonte como Calibri */
+            font-size: 8pt; /* Define o tamanho da fonte como 8 pontos */
+        }
+    </style>
+    
+    
+    
+</head>
+<body>
+<div class="container">
+  <h1>Mudança de Base</h1>
+      <label for="Vb1">Tensão (Vb1):</label>
+      <input type="number" id="Vb1" required>
+      <label for="Vb3">Tensão (Vb2):</label>
+      <input type="number" id="Vb2" required>
+      <label for="Sb3">Potência (Sb1):</label>
+      <input type="number" id="Sb1" required>
+      <label for="Sb4">Potência (Sb2):</label>
+      <input type="number" id="Sb2" required>
+      <label for="Z1pu3">Impedância (Z1 pu):</label>
+      <input type="number" id="Z1pu" required>
+      
+      
+      
+      
+        <button onclick="calcularSoma()">Calcular Z2 pu</button>
+       
+          
+        
+        
+        <h2 id="resultado"></h2>
+        <p class="texto-calibri">Copyright by Sidarta Trovão - 2025</p>
+    </div>
+  
+<img src="Mudança_Base.png" width="300" height="150" alt=""/>
+</body>
+</html>
